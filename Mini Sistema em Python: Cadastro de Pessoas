@@ -1,0 +1,38 @@
+# Mini sistema de cadastro - ADS
+
+cadastros = []
+
+while True:
+    print("\n--- MENU ---")
+    print("1 - Cadastrar pessoa")
+    print("2 - Listar pessoas")
+    print("3 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        nome = input("Digite o nome: ")
+        idade = input("Digite a idade: ")
+
+        pessoa = {
+            "nome": nome,
+            "idade": idade
+        }
+
+        cadastros.append(pessoa)
+        print("Pessoa cadastrada com sucesso!")
+
+    elif opcao == "2":
+        if len(cadastros) == 0:
+            print("Nenhuma pessoa cadastrada.")
+        else:
+            print("\nLista de pessoas cadastradas:")
+            for pessoa in cadastros:
+                print("Nome:", pessoa["nome"], "- Idade:", pessoa["idade"])
+
+    elif opcao == "3":
+        print("Saindo do sistema...")
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
