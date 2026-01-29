@@ -1,0 +1,9 @@
+import math
+
+num = int(input('Digite um número: '))
+
+if num < 0:
+    print('Não é possível calcular a raiz de número negativo.')
+else:
+    raiz = math.sqrt(num)
+    print(f'A raiz de {num} é igual a {math.floor(raiz)}')
